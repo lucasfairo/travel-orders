@@ -32,8 +32,13 @@ Once the containers are running, access the application container:
    docker exec -it onf-app bash
    ```
 
-### 3. Set Up Environment File
-Inside the application container:
+### 3. Install Composer Dependencies
+Inside the application container, install the required Composer dependencies:
+   ```bash
+   composer install
+   ```
+
+### 4. Set Up Environment File
 1. Create the `.env` file using the example provided:
    ```bash
    cp .env.example .env
@@ -44,7 +49,7 @@ Inside the application container:
    php artisan key:generate
    ```
 
-### 4. Configure JWT
+### 5. Configure JWT
 #### If JWT is already installed:
 Generate the JWT secret:
    ```bash
@@ -65,7 +70,7 @@ Generate the JWT secret:
    php artisan jwt:secret
    ```
 
-### 5. Run Migrations
+### 6. Run Migrations
 With the environment file configured, execute the database migrations:
    ```bash
    php artisan migrate
@@ -177,5 +182,3 @@ Default user credentials:
 ## Additional Resources
 
 For more information, please refer to the [Laravel 11 Documentation](https://laravel.com/docs/11.x).
-
----
