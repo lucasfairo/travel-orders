@@ -39,6 +39,13 @@ Inside the application container, install the required Composer dependencies:
    ```
 
 ### 4. Set Up Environment File
+ 
+This application uses two databases:
+
+Onfly Database: Used for general application data.
+
+Travel Orders Database: Dedicated to storing travel-related data
+
 1. Create the `.env` file using the example provided:
    ```bash
    cp .env.example .env
